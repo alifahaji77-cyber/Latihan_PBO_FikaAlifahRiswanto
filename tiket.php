@@ -29,9 +29,8 @@ abstract class Tiket extends Database {
         $this->hargaDasarTiket = $dataRow['harga_dasar_tiket'];
     }
 
-    /**
-     * Abstract Method: Wajib diimplementasikan dan diisi logikanya oleh class anak (subclass)
-     */
+    //Abstract Method: Wajib diimplementasikan dan diisi logikanya oleh class anak (subclass)
+    
     abstract public function hitungTotalHarga();
 
     /**
