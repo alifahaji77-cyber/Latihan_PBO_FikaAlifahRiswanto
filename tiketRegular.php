@@ -17,7 +17,7 @@ class TiketRegular extends Tiket {
 
     // Mengimplementasikan metode abstrak hitungTotalHarga
     public function hitungTotalHarga() {
-        return $this->hargaDasarTiket * $this->jumlah_kursi;
+        return $this->jumlah_kursi * $this->hargaDasarTiket;
     }
 
     // Mengimplementasikan metode abstrak tampilkanInfoFasilitas

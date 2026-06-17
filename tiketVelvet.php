@@ -14,10 +14,10 @@ class TiketVelvet extends Tiket {
         $this->layananButler     = $dataRow['layanan_butler'];
     }
 
-    // Mengimplementasikan perhitungan harga kelas VIP Velvet
+    // Mengimplementasikan metode abstrak hitungTotalHarga
     public function hitungTotalHarga() {
-        $biayaKenyamananPremium = 50000;
-        return ($this->hargaDasarTiket + $biayaKenyamananPremium) * $this->jumlah_kursi;
+        $totalHargaDasar = $this->jumlah_kursi * $this->hargaDasarTiket;
+        return $totalHargaDasar * 1.50;
     }
 
     public function tampilkanInfoFasilitas() {

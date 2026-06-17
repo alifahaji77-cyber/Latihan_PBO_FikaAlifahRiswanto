@@ -14,10 +14,10 @@ class TiketIMAX extends Tiket {
         $this->efekGerakFitur = $dataRow['gerak_fitur'];
     }
 
-    // Mengimplementasikan perhitungan harga dengan tambahan biaya teknologi IMAX
+    // Mengimplementasikan metode abstrak hitungTotalHarga
     public function hitungTotalHarga() {
-        $biayaTambahanTeknologi = 15000; 
-        return ($this->hargaDasarTiket + $biayaTambahanTeknologi) * $this->jumlah_kursi;
+        $biayaFlatIMAX = 35000;
+        return ($this->jumlah_kursi * $this->hargaDasarTiket) + $biayaFlatIMAX;
     }
 
     public function tampilkanInfoFasilitas() {
